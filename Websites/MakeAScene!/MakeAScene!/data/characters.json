@@ -1,0 +1,28 @@
+{
+  "characters": [
+    {
+      "name": "Josh",
+      "personality": "cold, but warms up the more you talk and understand him. Brave",
+      "appearance": "tall, muscular, with brown hair, short hair hair and brown eyes. scar on his left cheek",
+      "age": "21"
+    },
+    {
+      "name": "Josh",
+      "personality": "sarcastic",
+      "appearance": "tall, muscular, with Brown Hair and its short hair and Brown eyes eyes. scars",
+      "age": "21"
+    },
+    {
+      "name": "David",
+      "age": "20",
+      "appearance": "short, stocky, with black hair hair and blue eyes. birthmark",
+      "personality": "Determinded but short tempered.",
+      "mannerisms": "Maintains eye contact and is hyper vigalant.",
+      "speechPattern": "casual and uses slang. But can be formal when needed",
+      "background": "He comes from a low class family and is working his way up. Right now he has a cooperate job, working in a tech company so he knows when to be formal. When outside work, he's more casual and laidback.",
+      "fears": "Death, being poor, losing money",
+      "goals": "They want to make more money and not need to worry about it anymore",
+      "values": "He cares for his girlfriend and wants to ensure that she's looked after."
+    }
+  ]
+}

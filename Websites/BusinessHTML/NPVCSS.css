@@ -1,0 +1,80 @@
+
+/*header div class properties so the border is big, black and has the heading at the center*/
+.header {
+  padding: 60px;
+  text-align: center;
+  color: black;
+  font-size: 19px;
+  font-family: Verdana, sans-serif;
+  border-style: solid;
+  border-color: black;
+  font-style: normal;
+}
+
+
+
+#projectitle {
+  margin-top: 25%;
+  text-align: center;
+}
+
+#formz {
+  margin-top: 130px;
+  text-align: center;
+}
+
+#btnagain1 {
+  display: none;
+}
+
+
+#reset1 {
+  display:none;
+}
+
+
+
+html {
+   min-height: 100%; 
+   background-color: white; /* For browsers that do not support gradients */
+   /*background-image: linear-gradient(to right, white , red);   */
+   background-size: cover; 
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+form {
+  margin-top: 130px;
+  text-align: center;
+}
+
+
+/*table details for homepage*/
+
+table, td, th {  
+  border: 1px solid #000;
+  text-align: left;
+  
+}
+
+table {
+  border-collapse: collapse; /*so theres only one border around the table*/
+  width: 100%; /*match width to page width*/
+}
+
+th {
+  background-color:#bd393b;
+}
+
+th, td {
+  padding: 15px; /*space within table cells*/
+  color:black;
+}
+
+
+
+
+
+
+
+

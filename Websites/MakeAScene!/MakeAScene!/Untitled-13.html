@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeAScene</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="revised.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+        body {
+            font-family: "Tiny5", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .input-box,
+        .info-box,
+        .add-character,
+        .character-dialogue {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .input-box {
+            flex: 2;
+            text-align: center;
+        }
+
+        .info-box {
+            flex: 1;
+            text-align: center;
+        }
+
+        .add-character,
+        .character-dialogue {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            resize: none;
+            font-size: 16px;
+        }
+
+        select,
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MAKE-A-SCENE</h1>
+            <p>Your AI Story Assistant</p>
+        </div>
+
+        <div class="content">
+            <div class="input-box">
+                <h2>Write Your Story</h2>
+                <textarea id="story-input" placeholder="Enter your story here..."></textarea>
+                <button id="generate-story">Generate Story</button>
+            </div>
+
+            <div class="info-box">
+                <h2>About MakeAScene</h2>
+                <p>MakeAScene helps you craft amazing stories by generating ideas, characters, and dialogues.</p>
+                <p>Input your story, add characters, and interact with them to create dynamic narratives!</p>
+            </div>
+        </div>
+
+        <div class="add-character">
+            <h2>Add a Character</h2>
+            <form id="character-form">
+                <label for="genre">Select Genre</label>
+                <select id="genre">
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="romance">Romance</option>
+                    <option value="horror">Horror</option>
+                </select>
+
+                <label for="character-name">Character Name</label>
+                <input type="text" id="character-name" placeholder="Enter character name" required />
+
+                <button type="submit">Add Character</button>
+            </form>
+        </div>
+
+        <div class="character-dialogue">
+            <h2>Talk to Your Character</h2>
+            <form id="dialogue-form">
+                <label for="character-name-dialogue">Enter Character Name</label>
+                <input type="text" id="character-name-dialogue" placeholder="Enter character name" required />
+
+                <textarea id="character-dialogue-input" placeholder="What would you like to ask them?" rows="3"></textarea>
+                <button type="submit">Ask Character</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

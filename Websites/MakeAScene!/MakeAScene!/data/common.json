@@ -1,0 +1,8 @@
+{
+    "archetypes": {
+      "hero": "A courageous character who rises to meet challenges.",
+      "mentor": "A wise figure guiding the hero."
+    },
+    "sharedSettings": ["Urban cities", "Dark forests", "Isolated cabins"]
+  }
+  

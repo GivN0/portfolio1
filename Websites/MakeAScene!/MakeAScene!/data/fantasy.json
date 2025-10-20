@@ -1,0 +1,66 @@
+{
+    "fantasy": {
+      "characterArc": {
+        "TheHeroine": "Everyone knows this archetype from fantasy and beyond. The hero is the stand-up one, the fighter for justice and all things good. This archetype is honorable, persistent, courageous, and stands up for the weak. They can also be prone to arrogance. Example: Aragorn (The Lord of the Rings)",
+        "TheMagician": "The magician is all about power, baby. They need it. They’re obsessed with it. Being the best is all they want, and nothing will get in their way. This character is perceptive, disciplined, and selfish. Example: Doctor Strange (Marvel)",
+        "TheJester": "Did someone call for comedic relief? The jester is the funny guy. They also tend to be pretty insightful, using their humour to spotlight everything from corruption to the protagonist’s flaws. The jester is mischievous, impulsive, and—let’s be honest—a little obnoxious at times. Examples: Merry and Pip (The Lord of the Rings)",
+        "TheCommonPerson": "Your salt of the earth, blue-collar person, this archetype is all about relatability. The Common Person is kind, hard-working, virtuous, and seemingly unremarkable. They’re also unprepared for the extraordinary challenges that are about to come their way but tend to rise to meet them. Example: Bilbo Baggins (The Hobbit)",
+        "TheCreator": "The creator is obsessed with their ultimate creation. Nothing else is as important as bringing their vision to fruition—not relationships, not world peace, and definitely not family dinners. Example: Victor Frankenstein (Frankenstein)",
+        "TheRuler": "The one in charge. The king, queen, emperor, chieftain, high priestess, whatever you call them. The ruler has control over everything in their domain, and they'd really like to keep it that way, thank you very much. Whether they’re benevolent or greed-driven is up to you. Example: President Snow (The Hunger Games)",
+        "TheSage": "The sage is powerful, like a magician, but they don't want more for themselves. Instead, they're all about teaching others. Knowledgeable and patient, the sage is deeply committed to passing their wisdom onto their pupil. They’re genuinely caring and rational, though they can also be arrogant and aggravatingly passive. Example: Uncle Iroh (Avatar: The Last Airbender)",
+        "TheCaregiver": "This is that character who's constantly thinking about everybody else. If they have their own dreams, no one knows about them. The Caregiver is compassionate, selfless, and reliable. They’re often a guardian, older sibling, teacher, or partner. Example: Hagrid (Harry Potter)"
+      },
+      "plotArc": {
+        "TheHeroesJourney": "A young, unlikely hero is thrust into an adventure, faces trials, and emerges transformed. Example: Frodo in The Lord of the Rings.",
+        "TheChosenOne": "A prophecy or destiny marks a character as the one who will save the world. Example: Harry Potter in Harry Potter and the Sorcerer’s Stone.",
+        "TheQuest": "A group embarks on a journey to retrieve a powerful artifact or achieve a significant goal. Example: The search for the Holy Grail in Arthurian legends.",
+        "TheDarkOverlord": "A dark and oppressive ruler or force threatens the land, and a group rises to overthrow them. Example: Sauron in The Lord of the Rings.",
+        "TheHiddenWorld": "A character stumbles upon a hidden realm filled with magic, mystery, and danger. Example: Lyra discovering parallel worlds in His Dark Materials.",
+        "TheLostHeir": "A hidden royal or noble must reclaim their rightful place to bring balance to the realm. Example: Jon Snow in Game of Thrones.",
+        "TheComingOfAgeTale": "A young protagonist discovers their powers, identity, or purpose while navigating a fantastical world. Example: Ged in A Wizard of Earthsea.",
+        "GoodVsEvil": "The battle between a pure good force and a corrupt evil entity, often with epic stakes. Example: Aslan vs. the White Witch in The Chronicles of Narnia."
+      },
+      "storyExcerpts": "Chapter 3: The great forest. But now the poor child was all alone in the great forest, and so terrified that she looked at all the leaves on the trees, and did not know what to do...",
+      "dialogue": {
+        "MentorAndProtagonist": "Mentor: 'Do you know why the sword chooses you?' Protagonist: 'Because I'm destined?' Mentor: 'No. Because it knows you will suffer, and still you will not let go.'",
+        "VillainAndHero1": "Villain: 'You think you're different from me? That crown on your head is just a prettier cage.' Hero: 'Maybe, but I'm the one holding the key.'",
+        "VillainAndHero2": "Villain: 'Do you think I wanted this? To be the monster? They made me what I am.' Hero: 'You had a choice. You always had a choice.'",
+        "RogueAndMage": "Rogue: 'Why are we even listening to him? He's been lying to us from the start.' Mage: 'Because he knows what's inside that vault, and we don't.'",
+        "ProtagonistAndDragon": "Protagonist: 'Can you speak?' Dragon: 'Can you listen?'",
+        "ProtagonistAndAlly": "Protagonist: 'Why did you bring me here? I'm not a hero.' Ally: 'No one is born a hero. They become one when the moment demands it.'",
+        "LoverAndWarrior": "Lover: 'Promise me you'll come back.' Warrior: 'I can't promise that. But I can promise I'll fight to see you again.'",
+        "VillainAndHero3": "Villain: 'Even if you kill me, my darkness will live on in you.' Hero: 'Good thing I've learned to live with my shadows.'"
+      },
+      "badDialogue": {
+        "dialogue1": "'We must stop the Dark Lord, but I don't know how.' 'Me neither.'",
+        "dialogue2": "'I can't believe you betrayed me.' 'Yeah, I did. Sorry, I guess.'",
+        "dialogue3": "'The prophecy said you would save us.' 'I don't want to be a hero.' 'Too bad.'",
+        "dialogue4": "'What is this place?' 'It's the ancient city of doom, obviously.'",
+        "dialogue5": "'This is the sword of power.' 'What does it do?' 'It's a sword. It does sword stuff.'",
+        "dialogue6": "'I'm not scared of anything.' 'You should be. I know things that would scare you.' 'I don't care.'",
+        "dialogue7": "'I'm not going into that cave.' 'We have no choice. We must go in.'",
+        "dialogue8": "'I'll fight the dragon alone!' 'No, I will fight the dragon alone!'"
+      },
+      "badWriting": {
+        "writing1": "'The prophecy foretold of a chosen one who would rise from humble beginnings to save the world.'",
+        "writing2": "'The castle was big and looked really old.'",
+        "writing3": "'With a single wave of her hand, the entire army fell before her unmatched magical strength.'",
+        "writing4": "'I will destroy the world because I’m evil and that’s what I do!'",
+        "writing5": "'The sword glowed bright, and then everything was fine again.'",
+        "writing6": "'He had golden eyes, jet-black hair, and the kind of face that made women fall in love instantly.'",
+        "writing7": "'As he walked through the magical forest, he felt a strange sense of destiny.'",
+        "writing8": "'The ancient tome was written in a language no one could read, except conveniently for the hero.'"
+      },
+      "settings": [
+        "A Forest",
+        "An Ocean",
+        "A City",
+        "A Palace/Castle",
+        "Underground",
+        "The Underworld",
+        "Medieval Kingdoms",
+        "Space"
+      ]
+    }
+  }
+  

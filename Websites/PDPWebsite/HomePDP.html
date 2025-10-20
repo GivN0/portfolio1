@@ -1,0 +1,119 @@
+<!DOCTYPE html>  
+<!--Home page of the website-->
+<html>  
+   <head> 
+      <meta charset = "utf-8"> <!--specify character encoding as it includes more characters than ASCII-->
+	  <link rel="stylesheet" href="PDPCSS.css"> <!--link to CSS-->
+      <title>Home - Personal Development</title> <!--the text on the tab to resemble a professional website-->
+   </head> 
+  
+
+<script>
+function revealPlan(){ //on See PDP Example btn press, this will hide or show my PDP plan
+
+	//Getting the two table elements and the text above it 
+	var x = document.getElementById("demo"); 
+	var studentname = document.getElementById("details");
+	var teach = document.getElementById("teachers");
+
+  //show the elements if pressed else don't
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    
+  } else {
+    x.style.display = "none";
+  }
+ if (studentname.style.display === "none") {
+    studentname.style.display = "block";
+    
+  } else {
+    studentname.style.display = "none";
+  }
+ if (teach.style.display === "none") {
+    teach.style.display = "block";
+    
+  } else {
+    teach.style.display = "none";
+  }
+}
+</script>
+
+
+   <body> 
+	<div class = "header"> <!--for CSS design so the website has a large heading-->
+      <header> 
+         <h1> Personal Development </h1> 
+	   <p> Simplify your time at university with a Personal Development Plan!</p>
+	</div>
+      </header> 
+   
+	<!--navigation bar-->
+      <nav> 
+         <ul> 
+		 <li><a class="active" href="#home">Home</a></li>	<!--active class for page viewed currently-->
+            <li><a href = "Edit.html">Edit Plan</a></li> 	<!--link to other html file for the editing page-->
+         </ul> 
+      </nav> 
+   
+      <article> 
+         <section> 
+            <p>Hello!</p>
+         </section> 
+		<section>	<!--CSS class p so text is consistent with calm blue and modern aesthetic-->
+			<p class="p"> Welcome to Personal Developer, a website dedicated to ensuring you are prepared for university by providing a Personal Development Plan form to fill!</p>
+
+		<button onclick="revealPlan()">See PDP Example</button> <!--on pressing the button it will perform revealPlan function-->
+
+
+
+<!--my personal development plan-->
+
+<div id="details">
+<p><b> Student Name:</b> Given Onyumbe </p>
+<p><b> User ID: </b> 229016580 </p>
+<p><b>Period Covered:</b> 2 semesters (Sep 2022- May/June 2023) </p>
+<p><b>Appraiser/Personal Tutor:</b> Goes, Fabricio (Dr.) </p>
+</div>
+<table id="demo">
+  <tr>
+    <th>Objective/Task/Activity</th>
+    <th>How would you accomplish this?</th>
+    <th>Mid-year progress</th>
+    <th>Year-end outcome</th>
+  </tr>
+  <tr>
+    <td>Academic achievement</td>
+    <td>I will achieve this by revising all the points I learn from going lecture and looking at the slides and doing additional research to cover areas I still don’t understand.</td>
+  </tr>
+  <tr>
+    <td>Organizational and study skills</td>
+    <td>Arranging a schedule for when I should revise my subjects, as well as setting an alarm to attend lectures on time.</td>
+  </tr>
+	<tr>
+    <td> Leadership skills </td>
+    <td> Arranging a schedule for when I should revise my subjects, as well as setting an alarm to attend lectures on time. </td>
+    </tr>
+	<tr>
+      <td>Teamwork</td>
+	<td> By being open with others and helping other people more often, so that I become more accustomed to working as apart of a team and can therefore better operate in them. </td>
+	 </tr>
+	<tr>
+	<td> Presentation and communication skills </td>
+	<td> I’ll make my presentations clear and concise, doing the right amount of research and condensing the information as much as possible to then allow me to better communicate my ideas. Doing a lot of research on the topic of my presentation would also help me as I would have a better understanding of my presentation, and as such I will be able to communicate my points even more efficiently. </td>
+	    </tr>
+  
+	</table>
+	
+	</section>
+      </article> 
+   	   </body> 
+
+
+<!--puts the aside in a CSS designed box-->
+<div class=tip>
+<aside> This website is dedicated to helping students plan their days better for university so they attain the best grades possible. By pressing See PDF Example, you'll see Given Onyumbe's Personal Development Plan as an example to give you guidance if you need help writing yours. <b> You can edit your own by pressing "Edit Plan" </b></aside>
+</div>
+	<footer>
+		<p> Created by Given Onyumbe Inc </p>
+	</footer>
+</html> 

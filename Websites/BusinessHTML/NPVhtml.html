@@ -1,0 +1,686 @@
+<!DOCTYPE html>  
+<html>  
+   <head> 
+      <meta charset = "utf-8"> <!--specify character encoding as it includes more characters than ASCII-->
+	  <link rel="stylesheet" href="NPVCSS.css"> <!--link to CSS-->
+      <title>Project Evaluator</title> <!--the text on the tab to resemble a professional website-->
+   </head> 
+  
+
+<script>
+
+//save details to LocalStorage 
+function saveToLocal(){
+
+  //textbox values
+    box1 = document.getElementById("project1").value;
+    box2 = document.getElementById("project2").value;
+    box3 = document.getElementById("project3").value;
+    //proj1 = document.getElementById("proj1").innerHTML;
+
+//forms 
+    formz = document.getElementById("projects");
+    boxx1 = document.getElementById("project1");
+    boxx2 = document.getElementById("project2");
+    boxx3 = document.getElementById("project3");
+    btn = document.getElementById("btn"); //save btn
+    //projects form 
+    formz = document.getElementById("projects");
+    formz1 = document.getElementById("formz");
+
+
+ 
+    
+//if not empty save to localStorage; data validation 
+    if (box1 == "" || box2 == "" || box3 == ""){
+        alert("Please fill in your project titles")
+        return false;
+    }   else {
+        localStorage.setItem("project1", box1);
+        localStorage.setItem("project2", box2);
+        localStorage.setItem("project3", box3);
+        localStorage.setItem("check", "true");
+        btn.style.display="none";
+        alert("Project saved!")
+
+  
+  
+
+}
+}
+
+//save form details for cash flow in localStorage for project1
+function save(){
+
+    cashin0 = document.getElementById("cash0i").value;
+    cashout0 = document.getElementById("cash0o").value;
+    cashin1 = document.getElementById("cash1i").value;
+    cashout1 = document.getElementById("cash1o").value;
+    cashin2 = document.getElementById("cash2i").value;
+    cashout2 = document.getElementById("cash2o").value;
+    cashin3 = document.getElementById("cash3i").value;
+    cashout3 = document.getElementById("cash3o").value;
+    formm = document.getElementById("formz");
+    btn1 = document.getElementById("btnz");
+    project1 = document.getElementById("demo1");
+    project2 = document.getElementById("demo2");
+    project3 = document.getElementById("demo3");
+
+    //data validation to check right info was entered by user
+    if (cashin0=="" || cashout0=="" || cashin1=="" || cashin2==""|| cashin3==""|| cashout3=="" || isNaN(cashin0) || isNaN(cashout0) || isNaN(cashin1) || isNaN(cashout1) || isNaN(cashin2) || isNaN(cashout2) || isNaN(cashin3) || isNaN(cashout3)){
+       
+        alert("Please fill out everything with the correct details");
+
+
+
+    } else if(localStorage.getItem("check")==null) {
+        alert("Please fill in the other project titles");
+    } else {
+
+    
+        //cash flows saved 
+        localStorage.setItem("1cash0i", cashin0);
+        localStorage.setItem("1cash0o",cashout0);
+        localStorage.setItem("1cash1i", cashin1);
+        localStorage.setItem("1cash1o",cashout1);
+        localStorage.setItem("1cash2i", cashin2);
+        localStorage.setItem("1cash2o",cashout2);
+        localStorage.setItem("1cash3i", cashin3);
+        localStorage.setItem("1cash3o",cashout3);
+        localStorage.removeItem("check");
+
+        formm.reset();
+        //hide button to prevent error if pressed
+        btn1.style.display="none";
+    
+        generateTables("1"); //generate table for project 1
+        
+
+
+
+    
+    }
+}
+
+//save form details for cash flow in localStorage for project2
+function project2save(){
+    cashin0 = document.getElementById("cash0i").value;
+    cashout0 = document.getElementById("cash0o").value;
+    cashin1 = document.getElementById("cash1i").value;
+    cashout1 = document.getElementById("cash1o").value;
+    cashin2 = document.getElementById("cash2i").value;
+    cashout2 = document.getElementById("cash2o").value;
+    cashin3 = document.getElementById("cash3i").value;
+    cashout3 = document.getElementById("cash3o").value;
+    formm = document.getElementById("formz");
+    btn2 = document.getElementById("btn2");
+
+    if (cashin0=="" || cashout0=="" || cashin1=="" || cashin2==""|| cashin3==""|| cashout3=="" || isNaN(cashin0) || isNaN(cashout0) || isNaN(cashin1) || isNaN(cashout1) || isNaN(cashin2) || isNaN(cashout2) || isNaN(cashin3) || isNaN(cashout3)){
+       
+      alert("Please fill out everything with the correct details");
+
+     } else {
+
+
+       //cash flows saved
+       localStorage.setItem("2cash0i", cashin0);
+        localStorage.setItem("2cash0o",cashout0);
+        localStorage.setItem("2cash1i", cashin1);
+        localStorage.setItem("2cash1o",cashout1);
+        localStorage.setItem("2cash2i", cashin2);
+        localStorage.setItem("2cash2o",cashout2);
+        localStorage.setItem("2cash3i", cashin3);
+        localStorage.setItem("2cash3o",cashout3);
+
+        formm.reset();
+        btn2.style.display="none";
+        generateTables("2"); //generate table for project 2 
+   }
+  
+       
+
+
+
+
+
+
+}
+
+//save form details for cash flow in localStorage for project3
+function project3save(){
+    cashin0 = document.getElementById("cash0i").value;
+    cashout0 = document.getElementById("cash0o").value;
+    cashin1 = document.getElementById("cash1i").value;
+    cashout1 = document.getElementById("cash1o").value;
+    cashin2 = document.getElementById("cash2i").value;
+    cashout2 = document.getElementById("cash2o").value;
+    cashin3 = document.getElementById("cash3i").value;
+    cashout3 = document.getElementById("cash3o").value;
+    formm = document.getElementById("formz");
+    btn3 = document.getElementById("btn3");
+
+    if (cashin0=="" || cashout0=="" || cashin1=="" || cashin2==""|| cashin3==""|| cashout3=="" || isNaN(cashin0) || isNaN(cashout0) || isNaN(cashin1) || isNaN(cashout1) || isNaN(cashin2) || isNaN(cashout2) || isNaN(cashin3) || isNaN(cashout3)){
+       
+      alert("Please fill out everything with the correct details");
+
+   } else {
+
+    //cash flows saved 
+      localStorage.setItem("3cash0i", cashin0);
+        localStorage.setItem("3cash0o",cashout0);
+        localStorage.setItem("3cash1i", cashin1);
+        localStorage.setItem("3cash1o",cashout1);
+        localStorage.setItem("3cash2i", cashin2);
+        localStorage.setItem("3cash2o",cashout2);
+        localStorage.setItem("3cash3i", cashin3);
+        localStorage.setItem("3cash3o",cashout3);
+
+        formm.reset();
+        btn3.style.display="none";
+        generateTables("3"); //generate table for project 3
+
+}
+}
+
+
+//adds appropiate values to tables for each project 
+    function generateTables(p){
+
+      table = document.getElementById("demo" + p);
+
+      //reset and NPV btn to toggle show/hide
+      reset = document.getElementById("reset1");
+      npvbtn = document.getElementById("btnagain1");
+
+
+      //caption for project
+      var x = document.createElement("CAPTION");
+  var t = document.createTextNode(localStorage.getItem("project" + p));
+  x.appendChild(t);
+
+  table.insertBefore(x, table.childNodes[0]);
+
+
+        //tables 2 and 3 
+        table2 = document.getElementById("demo2");
+        table3 = document.getElementById("demo3");
+
+        
+
+
+    
+        trCashFlow = document.getElementsByTagName("tr")[1];
+        tdCashFlow = document.getElementsByTagName("td")[5];
+        
+//get cash flow values from localStorage for each project         
+cashin0Local = localStorage.getItem(p + "cash0i");
+cashout0Local = localStorage.getItem(p + "cash0o");
+cashin1Local = localStorage.getItem(p + "cash1i");
+cashout1Local = localStorage.getItem(p+"cash1o");
+cashin2Local = localStorage.getItem(p + "cash2i");
+cashout2Local = localStorage.getItem(p +"cash2o");
+cashin3Local = localStorage.getItem(p +"cash3i");
+cashout3Local = localStorage.getItem(p + "cash3o");
+
+//net cash flow 
+totalCashFlow0 = cashin0Local-cashout0Local;
+totalCashFlow1 = cashin1Local - cashout1Local;
+totalCashFlow2 = cashin2Local - cashout2Local;
+totalCashFlow3 = cashin3Local - cashout3Local;
+
+
+//put net cash flow in the fourth column in table 
+trCF0 = table.getElementsByTagName("tr")[1];
+tdCF0 = trCF0.getElementsByTagName("td")[3];
+tdCF0.innerHTML=totalCashFlow0;
+
+trCF1 = table.getElementsByTagName("tr")[2];
+tdCF1 = trCF1.getElementsByTagName("td")[3];
+tdCF1.innerHTML=totalCashFlow1;
+
+trCF2 = table.getElementsByTagName("tr")[3];
+tdCF2 = trCF2.getElementsByTagName("td")[3];
+tdCF2.innerHTML=totalCashFlow2;
+
+trCF3 = table.getElementsByTagName("tr")[4];
+tdCF3 = trCF3.getElementsByTagName("td")[3];
+tdCF3.innerHTML=totalCashFlow3;
+
+
+//get present value and multiplying by discount factor
+trPresVal0 = table.getElementsByTagName("tr")[1];
+tdPresVal0 = trPresVal0.getElementsByTagName("td")[5];
+percent0 = 1*totalCashFlow0;
+tdPresVal0.innerHTML=totalCashFlow0-percent0;
+
+trPresVal1 = table.getElementsByTagName("tr")[2];
+tdPresVal1 = trPresVal1.getElementsByTagName("td")[5];
+percent1=0.91*totalCashFlow1;
+tdPresVal1.innerHTML=totalCashFlow1-percent1;
+
+trPresVal2 = table.getElementsByTagName("tr")[3];
+tdPresVal2 = trPresVal2.getElementsByTagName("td")[5];
+percent2 = 0.83*totalCashFlow2;
+tdPresVal2.innerHTML=totalCashFlow2-percent2;
+
+trPresVal3 = table.getElementsByTagName("tr")[4];
+tdPresVal3 = trPresVal3.getElementsByTagName("td")[5];
+percent3 = 0.75*totalCashFlow3;
+tdPresVal3.innerHTML=totalCashFlow3-percent3;
+
+//putting cash in and cash out values in the table in the manner specified in brief 
+tr01 = table.getElementsByTagName("tr")[1];
+td01 = tr01.getElementsByTagName('td')[1];
+td01.innerHTML=localStorage.getItem(p + "cash0i");
+
+tr02 = table.getElementsByTagName("tr")[1];
+td02 = tr02.getElementsByTagName('td')[2];
+td02.innerHTML="(" + localStorage.getItem(p + "cash0o") + ")";
+
+tr11 = table.getElementsByTagName("tr")[2];
+td11 = tr11.getElementsByTagName('td')[1];
+td11.innerHTML=localStorage.getItem(p+"cash1i");
+
+tr12 = table.getElementsByTagName("tr")[2];
+td12 = tr12.getElementsByTagName('td')[2];
+td12.innerHTML="(" + localStorage.getItem(p+"cash1o") + ")";
+
+tr21 = table.getElementsByTagName("tr")[3];
+td21 = tr21.getElementsByTagName('td')[1];
+td21.innerHTML=localStorage.getItem(p+"cash2i");
+
+tr22 = table.getElementsByTagName("tr")[3];
+td22 = tr22.getElementsByTagName('td')[2];
+td22.innerHTML="(" + localStorage.getItem(p+"cash2o") + ")";
+
+tr31 = table.getElementsByTagName("tr")[4];
+td32 = tr31.getElementsByTagName('td')[1];
+td32.innerHTML=localStorage.getItem(p+"cash3i");
+
+tr41 = table.getElementsByTagName("tr")[4];
+td42 = tr41.getElementsByTagName('td')[2];
+td42.innerHTML="(" + localStorage.getItem(p+"cash3o") + ")";
+
+//getting the npv and placing it in table and rounding it to 2 decimal places 
+tr411 = table.getElementsByTagName("tr")[5];
+td422 = tr411.getElementsByTagName('td')[3];
+npv = (totalCashFlow0-percent0)+(totalCashFlow1-percent1)+(totalCashFlow2-percent2)+(totalCashFlow3-percent3);
+localStorage.setItem("npv"+p,npv.toFixed(2)); //2 decimal places
+td422.innerHTML= "NPV = " + localStorage.getItem("npv"+p);
+
+
+
+//show the NPV and reset btns only when all tables are completely filled to prevent chance of error 
+if(localStorage.getItem("3cash0o") !== null){
+   reset.style.display="block";
+   npvbtn.style.display="block";
+   
+}
+
+
+}
+
+function findLargest(arr) { 
+        let i; 
+        
+        // Initialize maximum element 
+        let max = arr[0]; 
+    
+        // Traverse array elements  
+        // from second and compare 
+        // every element with current max  
+        for (i = 1; i < arr.length; i++) {
+            if (arr[i] > max) 
+                max = arr[i]; 
+        } 
+          
+      return max; 
+} 
+  
+
+        
+    
+
+//gets NPV from localStorage and displays it 
+function findNetPresentVal(){
+
+//convert npvs for each project into int
+  npv1 = parseFloat(localStorage.getItem("npv1"));
+    npv2 = parseFloat(localStorage.getItem("npv2"));
+    npv3 = parseFloat(localStorage.getItem("npv3"));
+    table3 = document.getElementById("demo3");
+  
+  //find highest NPV and convert to str by sorting an array of NPVs  
+  let npvs = [npv1, npv2, npv3];
+  bestNPV = findLargest(npvs);
+         
+ 
+  //check if NPV is project1, 2 or 3 and display all NPVs and the project with the best NPV as an alert and aside tag
+  //remove projects from localStorage for space 
+    if (localStorage.getItem("npv1")==bestNPV.toString()){
+        alert("The best project based on Net Present Value (NPV) is " + localStorage.getItem("project1"));
+      
+      var x = document.createElement("ASIDE");
+  x.setAttribute("id", "myAside");
+  document.body.appendChild(x);
+
+  var heading = document.createElement("H4");
+  var txt1 = document.createTextNode("Net Present Values for all Projects");
+  heading.appendChild(txt1);
+  document.getElementById("myAside").appendChild(heading);
+
+  var para = document.createElement("P");
+  var txt2 = document.createTextNode("NPV for Project " + localStorage.getItem("project1") + ": " + localStorage.getItem("npv1") + ". \nNPV for Project " + localStorage.getItem("project2") + ": " + localStorage.getItem("npv2") + ". \nNPV for Project " + localStorage.getItem("project3") + ": " + localStorage.getItem("npv1") + ". \n The best project based on Net Present Value (NPV) is " + localStorage.getItem("project1") + ".");
+
+  para.appendChild(txt2);
+  document.getElementById("myAside").appendChild(para);
+  
+  localStorage.removeItem("project1");
+      localStorage.removeItem("project2");
+      localStorage.removeItem("project3");
+
+
+    } else if (localStorage.getItem("npv2")==bestNPV.toString()){
+        alert("The best project based on Net Present Value (NPV) is " + localStorage.getItem("project2"));
+      
+      var x = document.createElement("ASIDE");
+  x.setAttribute("id", "myAside");
+  document.body.appendChild(x);
+
+  var heading = document.createElement("H4");
+  var txt1 = document.createTextNode("Net Present Values for all Projects");
+  heading.appendChild(txt1);
+  document.getElementById("myAside").appendChild(heading);
+
+  var para = document.createElement("P");
+  var txt2 = document.createTextNode("NPV for Project " + localStorage.getItem("project1") + ": " + localStorage.getItem("npv1") + ". \nNPV for Project " + localStorage.getItem("project2") + ": " + localStorage.getItem("npv2") + ". \nNPV for Project " + localStorage.getItem("project3") + ": " + localStorage.getItem("npv2") + ". \n The best project based on Net Present Value (NPV) is " + localStorage.getItem("project2") + ".");
+
+  para.appendChild(txt2);
+  document.getElementById("myAside").appendChild(para);
+  localStorage.removeItem("project1");
+      localStorage.removeItem("project2");
+      localStorage.removeItem("project3");
+
+
+  
+    } else if (localStorage.getItem("npv3")==bestNPV.toString()){
+      alert("The best project based on Net Present Value (NPV) is " + localStorage.getItem("project3"));
+      
+      var x = document.createElement("ASIDE");
+  x.setAttribute("id", "myAside");
+  document.body.appendChild(x);
+
+  var heading = document.createElement("H4");
+  var txt1 = document.createTextNode("Net Present Values for all Projects");
+  heading.appendChild(txt1);
+  document.getElementById("myAside").appendChild(heading);
+
+  var para = document.createElement("P");
+  var txt2 = document.createTextNode("NPV for Project " + localStorage.getItem("project1") + ": " + localStorage.getItem("npv1") + ". \nNPV for Project " + localStorage.getItem("project2") + ": " + localStorage.getItem("npv2") + ". \nNPV for Project " + localStorage.getItem("project3") + ": " + localStorage.getItem("npv3") + ". \n The best project based on Net Present Value (NPV) is " + localStorage.getItem("project3")+".");
+
+  para.appendChild(txt2);
+  document.getElementById("myAside").appendChild(para);
+  localStorage.removeItem("project1");
+      localStorage.removeItem("project2");
+      localStorage.removeItem("project3");
+     } else {
+       alert("Sorry, either not all NPVs were obtained or an unexpected error has occured.")
+       
+
+      }
+  
+
+ 
+
+}
+
+
+
+
+
+
+
+      
+
+
+</script>
+
+
+   <body> 
+    <div class = "header">
+    <header> 
+        <h1>Project Evaluator</h1>
+     </header>
+    </div>
+
+
+   <!--form for entering project titles and btn to save to localStorage-->
+    <form id="projects">
+        <label for="fname" id="proj1t">Project 1:</label>
+        <input type="text" id="project1" name="fname"><br><br>
+        <label for="lname" id="proj2t"></label>Project 2:</label>
+        <input type="text" id="project2" name="lname"><br><br>
+        <label for="lname" id="proj3t"></label>Project 3:</label>
+        <input type="text" id="project3" name="lname"><br><br>
+        <button type ="button" id="btn" onclick="saveToLocal()">Save Plan</button>
+        
+
+      </form>
+      
+
+    <!--  
+    form for cash flow values
+    -->
+      <form id="formz">
+        <label for="fname">Year 0 Cash In:</label>
+        <input type="text" id="cash0i" name="fname"><br><br>
+        <label for="lname"></label>Year 0 Cash Out:</label>
+        <input type="text" id="cash0o" name="lname"><br><br>
+        <label for="lname"></label>Year 1 Cash In:</label>
+        <input type="text" id="cash1i" name="lname"><br><br>
+        <label for="lname"></label>Year 1 Cash Out:</label>
+        <input type="text" id="cash1o" name="lname"><br><br>
+        <label for="lname"></label>Year 2 Cash In:</label>
+        <input type="text" id="cash2i" name="lname"><br><br>
+        <label for="lname"></label>Year 2 Cash Out:</label>
+        <input type="text" id="cash2o" name="lname"><br><br>
+        <label for="lname"></label>Year 3 Cash In:</label>
+        <input type="text" id="cash3i" name="lname"><br><br>
+        <label for="lname"></label>Year 3 Cash Out:</label>
+        <input type="text" id="cash3o" name="lname"><br><br>
+        <!--saves plans for each project-->
+        <button type ="button" id="btnz" onclick="save()">Save Plan for Project 1</button><br><br><br><br>
+        <button type ="button" id="btn2" onclick="project2save()">Save Plan for Project 2</button>
+        <button type ="button" id="btn3" onclick="project3save()">Save Plan for Project 3</button>
+   
+    </form>
+   
+    
+    <!--tables for projects-->
+    <table id="demo1">
+  <tr>
+    <th>Year</th>
+    <th>Cash In</th>
+    <th>Cash Out</th>
+    <th>Net Cash Flow (£)</th>
+    <th>Discount factor</th>
+    <th>Present value(£)</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>1.00</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td> 0.91</td>
+    <td></td>
+  </tr>
+	<tr>
+    <td>2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.83</td>
+    <td></td>
+    </tr>
+	<tr>
+      <td>3</td>
+	<td></td>
+    <td></td>
+    <td></td>
+    <td>0.75</td>
+    <td></td>
+	 </tr>
+	<tr>
+	<td>4</td>
+	<td></td>
+    <td></td>
+    <td><b>NPV=</b></td>
+    <td></td>
+	    </tr>
+  
+	</table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+      
+
+    <table id="demo2">
+        
+      <tr>
+        <th>Year</th>
+        <th>Cash In</th>
+        <th>Cash Out</th>
+        <th>Net Cash Flow (£)</th>
+        <th>Discount factor</th>
+        <th>Present value(£)</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1.00</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td> 0.91</td>
+        <td></td>
+      </tr>
+        <tr>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>0.83</td>
+        <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>0.75</td>
+        <td></td>
+         </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><b>NPV=</b></td>
+        <td></td>
+            </tr>
+      
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+
+        <table id="demo3">
+           
+          <tr>
+            <th>Year</th>
+            <th>Cash In</th>
+            <th>Cash Out</th>
+            <th>Net Cash Flow (£)</th>
+            <th>Discount factor</th>
+            <th>Present value(£)</th>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td> 0.91</td>
+            <td></td>
+          </tr>
+            <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>0.83</td>
+            <td></td>
+            </tr>
+            <tr>
+              <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>0.75</td>
+            <td></td>
+             </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>NPV=</b></td>
+            <td></td>
+                </tr>
+          
+            </table>
+
+            <br>
+            <br>
+            <br>
+<!--NPV and reset btn-->
+            <button type= "button" id="btnagain1" onclick="findNetPresentVal()"> Click here to find the best business!</button><br><br>
+            <button type = "button" id="reset1" onClick="window.location.reload()">Reset for new projects</button> <!--reloads the page-->
+	</section>
+      </article> 
+    
+   	   </body>
+
+	
+</html> 

@@ -1,0 +1,108 @@
+{
+    "adventure": {
+        "characterArc": {
+            "characterArc1": "1. The Professional\nThis is a character who's fundamentally adventuring because they're good at fighting. They could be a mercenary, a gladiator, a bounty hunter, or a duty-bound champion; regardless, fighting is the name of their game. Typically, they seek wealth, fame, or glory - but they may have other backstory hooks based on the other archetypes they embody.",
+
+            "characterArc2": "2. The Haunted\nThis is a character whose backstory is dominated by a single momentous (often traumatic) event in their lives. Examples include watching their home burn down, escaping a shipwreck, or gazing into the maw of an aberrant beast just before it swallowed a city. Nine times out of ten, this involves some dead parents.",
+
+            "characterArc3": "3. The Runaway\nAs the name suggests, this character is running away from the big event in their backstory. A Fighter guilty of murdering an innocent man, a Monk who escaped a shadowy order, or a noble forced into hiding - a runaway's motivation is defined by the thing they're trying to avoid while they adventure.",
+
+            "characterArc4": "4. The Amnesiac\nA pretty obvious one; this is a character who has lost their memories or simply doesn't know their origins. Often, but not always, they want to get those memories back (see Seeker).",
+
+            "characterArc5": "5. The Chosen\nA character who has been selected, either by magic or by society, to bear a particular responsibility. Sometimes, the character embraces the mantle; other times, they become a Runaway. Regardless, this role represents something more than the character themselves; it's a symbol, an ideal, or a curse that must be faced.",
+
+            "characterArc6": "6. The Faithful\nThis character is motivated by a devotion to their art.",
+
+            "characterArc7": "7. The Inquisitive\nThis character wants to know everything. It might be about a particular domain of expertise, of course, but it might also be everything. Whether hungry for book knowledge or for ferreting out secrets, this character lives and dies by information.",
+
+            "characterArc8": "8. The Stranger\nThe stranger is foreign to the central location for one reason or another. They may be a traveler from a foreign country, a planar refugee, or a Captain-America-esque Man Out of Time. Regardless, this backstory choice often has a huge effect on roleplay as this character learns to deal with the customs of the world around them."
+        },
+
+        "plotArc": {
+            "plotArc1": "A hidden treasure map is discovered.",
+            "plotArc2": "The protagonist is shipwrecked on a mysterious island.",
+            "plotArc3": "A legendary artifact must be retrieved from a dangerous location.",
+            "plotArc4": "A long-lost civilization is uncovered during an expedition.",
+            "plotArc5": "The hero is forced to navigate a deadly labyrinth to escape.",
+            "plotArc6": "The antagonist kidnaps an ally, prompting a daring rescue.",
+            "plotArc7": "A secret passage is found leading to a forgotten kingdom.",
+            "plotArc8": "A race against time to stop a catastrophic event."
+        },
+
+        "storyExcerpts": "Walter Scott's recognition of the supreme delightfulness of Gil Blas has not been general among the critics; indeed, the sense of its intrinsic value as a definition of life must rather be placed to the credit of the uncritical public. Voltaire, referring to Lesage in his 'Siecle de Louis XIV,' limits his praise to the remark: 'His novel Gil Blas has survived because of the naturalness of the style.' The curtness and inadequacy of this remark are probably due rather to the fact that Voltaire did not see beyond the superficial traits of this novel, its general picaresque atmosphere, than, as has so often been asserted, to any malicious intent to decry a book in which he supposed himself to have been held up to ridicule. [The traditional view is, however, plausible enough, as Mr. James Fitzmaurice-Kelly has shown in his introduction to the edition of Gil Blas published in the 'World's Classics.' There can be no doubt as to Lesage having ridiculed Voltaire in two of his plays.] Joubert, whose delicacy was a hothouse fruit grown in the thin subsoil and the devitalized air in which he was compelled to live, corroborates Voltaire, while revealing his own prejudices -- after all, is not the main interest of criticism the light it throws upon the critic? -- in a characteristic utterance: 'Lesage's novels would appear to have been written in a cafe by a domino-player, after spending the evening at the play.'"
+
+        ,
+
+        "dialogue": {
+            "dialogue1": "\"We don't have time to argue! The cave's flooding, and the map says the exit is this way--trust me!\"\n\"If we don't move now, the bridge will collapse!\"\n\"And if we move too fast, it'll collapse under us! Choose carefully!\"",
+
+            "dialogue2": "\"This isn't just a relic--it's the key to the lost kingdom. Look at the inscription!\"",
+
+            "dialogue3": "\"I've heard tales of the crystal forest, but seeing it with my own eyes... it's like stepping into a dream.\"",
+
+            "dialogue4": "\"You had one job--watch our supplies! Now we're stranded in the desert with nothing!\"\n\"I didn't see you stopping the sandstorm. Back off!\"",
+
+            "dialogue5": "\"I knew we couldn't trust you! You've been leading us in circles!\"\n\"You think you could've done better? Fine--take the compass and lead!\"",
+
+            "dialogue6": "\"We've come too far to turn back now. The answers we seek are beyond that ridge, no matter how dangerous the climb.\"",
+
+            "dialogue7": "\"I didn't see you stopping the sandstorm. Back off!\"",
+
+            "dialogue8": "\"Well, that was fun. Next time, let's take the less booby-trapped route, shall we?\""
+        },
+
+        "badDialogue": {
+            "dialogue1": "\"We have to stop him!\"\nCharacter 2: \"I know! But how? We don't have enough time!\"\nCharacter 1: \"We have to act fast, or it's over.\"\nCharacter 2: \"Yeah, I know, I just said that.\"",
+
+            "dialogue2": "\"You're not going to make it out of here alive.\"\nCharacter 2: \"We'll see about that.\"\nCharacter 1: \"I'm serious, you're dead.\"\nCharacter 2: \"Okay, whatever. We'll see.\"",
+
+            "dialogue3": "\"I can't believe we're doing this.\"\nCharacter 2: \"I know, but we have no choice.\"\nCharacter 1: \"There's always a choice.\"\nCharacter 2: \"Not this time.\"",
+
+            "dialogue4": "\"We need to hurry. Time's running out.\"\nCharacter 2: \"Tell me something I don't know.\"\nCharacter 1: \"Well, we can't just stand here talking.\"\nCharacter 2: \"I know! That's what I'm saying!\"",
+
+            "dialogue5": "\"What's the plan?\"\nCharacter 2: \"The plan is to stop them.\"\nCharacter 1: \"How?\"\nCharacter 2: \"We'll figure it out along the way.\"\nCharacter 1: \"Great.\"",
+
+            "dialogue6": "\"You really think you can escape?\"\nCharacter 2: \"I'm not escaping. I'm surviving.\"\nCharacter 1: \"Same thing.\"\nCharacter 2: \"No, it's not.\"",
+
+            "dialogue7": "\"Don't do it.\"\nCharacter 2: \"I have to.\"\nCharacter 1: \"Why?\"\nCharacter 2: \"Because I can.\"",
+
+            "dialogue8": "\"Where are we going?\"\nCharacter 2: \"Somewhere safe.\"\nCharacter 1: \"You sure about that?\"\nCharacter 2: \"As sure as I can be.\""
+        },
+
+        "badWriting": {
+            "badWriting1": "\"It was a dark and stormy night, and the brave hero stood ready to face the unknown.\"",
+
+            "badWriting2": "\"They trekked through the jungle, and everything went according to plan.\"",
+
+            "badWriting3": "\"We need to go to the temple.\"\n\"Okay. Let's go.\"",
+
+            "badWriting4": "\"Just when the boulder was about to crush them, the hidden door opened automatically, and they stepped inside to safety.\"",
+
+            "badWriting5": "\"The ancient temple was enormous, with towering, ornate pillars decorated with carvings of gods and creatures, their intricate designs almost glowing in the dim light filtering through the vines, which hung delicately yet thickly over every crack and crevice of the moss-covered walls.\"",
+
+            "badWriting6": "\"They waited in the cave, hoping something would happen to guide them.\"",
+
+            "badWriting7": "\"I believe we are in a situation that requires urgent attention, and I would highly recommend proceeding with caution, as the circumstances are both dire and highly unpredictable.\"",
+
+            "badWriting8": "\"As they ventured deeper into the cave, the shadows grew longer, and the temperature dropped, creating an unsettling atmosphere that only added to the growing sense of dread.\""
+        },
+
+        "writingExamples": {
+            "writingExample1": "\"The wind howled, sending whirls of sand into their faces as they trekked across the desert. The only sound was the crunch of their boots on the shifting dunes, and the distant rumble of thunder in the far horizon. It was a race against time—survive the desert's fury or die trying.\"",
+
+            "writingExample2": "\"She tightened her grip on the hilt of her sword as the ancient doors creaked open. The chamber ahead was shrouded in darkness, and every step they took echoed unnervingly in the silence. But she had come this far; nothing could stop her now.\"",
+
+            "writingExample3": "\"The river was fast and treacherous, its waters dark and unfathomable. But there was no turning back; the only way out was through. With every stroke of the paddle, the cliffs seemed to grow higher, the water rising as if determined to swallow them whole.\"",
+
+            "writingExample4": "\"The stars above glimmered in the inky black sky as the adventurers gathered around the campfire, their faces illuminated by the flickering flames. They were far from home now, and ahead lay the unknown. But in this moment, there was peace—before the storm.\"",
+
+            "writingExample5": "\"The cave was silent except for the drip of water from the stalactites above. Their torches flickered as they moved deeper into the darkness, the path narrowing with every step. There was no telling what lay ahead, but one thing was certain—they were not alone.\"",
+
+            "writingExample6": "\"He could feel the weight of the ancient artifact in his hand, its cold surface pressing against his palm. It was both a burden and a blessing, a key to untold power—and the last piece of the puzzle that would unlock the secrets of the forgotten temple.\"",
+
+            "writingExample7": "\"The trees were thick and tangled, their branches reaching out like twisted fingers to ensnare them. The path ahead was barely visible, swallowed by the dense foliage. Every step forward felt like a step deeper into the unknown.\"",
+
+            "writingExample8": "\"The mountain loomed ahead, its peak lost in the clouds. It seemed an insurmountable obstacle, but the adventurers pressed on, knowing that beyond the summit lay the answers they had sought for so long. There would be no turning back.\""
+        }
+    }
+}

@@ -1,0 +1,104 @@
+
+/*header div class properties so the border is big, black and has the heading at the center*/
+.header {
+  padding: 60px;
+  text-align: center;
+  color: black;
+  font-size: 19px;
+  font-family: Verdana, sans-serif;
+  border-style: solid;
+  border-color: black;
+  font-style: normal;
+}
+
+/*selector for unordered lists to change to navigation bar*/
+ul {
+  list-style-type: none; /*no predefined list type as it will be a nav bar*/
+  margin: 0;
+  padding: 0;
+  background-color: #0096FF;
+  overflow:hidden;
+}
+
+li {
+  float: left; /*aligned to left*/
+  border-right:1px solid #bbb;
+}
+
+/*anchor properties*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  padding: 14px 16px; /*size of space within each button on navbar */
+  text-decoration: none;
+}
+
+/*pseudo class for hover colour for nav bar*/
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/*colour when button in nav pressed*/
+.active {
+  background-color:#3305A3;
+}
+
+
+
+/*background image*/
+html {
+   min-height: 100%; /*has to fill the whole page*/
+   background-image: url("https://thumbs.dreamstime.com/b/best-books-home-library-background-read-vintage-row-college-table-publishing-pile-old-lie-concept-vacation-161662282.jpg");
+   background-size: cover; 
+   background-repeat: no-repeat;
+   background-position: center center; /*middle of the screen*/
+}
+
+/*for homepage blue background colour text */
+.p {
+	background-color: #43A6C6; /*lightblue variation*/
+	color: white;
+	font-family: Verdana, sans-serif; /*a modern font*/
+}
+
+
+/*table details for homepage*/
+
+table, td, th {  
+  border: 1px solid #000;
+  text-align: left;
+  background-color:#399cbd;
+}
+
+table {
+  border-collapse: collapse; /*so theres only one border around the table*/
+  width: 100%; /*match width to page width*/
+}
+
+th, td {
+  padding: 15px; /*space within table cells*/
+  color:white;
+}
+
+
+
+/*the light blue text box*/
+.tip {
+border-style:solid;
+border-color:blue;
+  background-color: lightblue;    
+      width: 40%; /*less than half of the page*/
+      float: right; /*aligned to the right side of the page by default */
+      color: black;
+       padding: 5px;
+      margin: 10px;
+      height: 100px;
+	margin-top:-550px; /*the specific pixels for the text box*/
+	margin-right:450px;
+}
+
+
+
+

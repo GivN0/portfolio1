@@ -1,0 +1,366 @@
+<!DOCTYPE html>  
+
+<html>  
+   <head> 
+      <meta charset = "utf-8"> 
+      <title>Edit Own Plan - Personal Development</title> 
+   </head> 
+  
+<style>
+
+/*classes for aside elements*/
+.aside1{
+      width: 40%; 
+      float: right;
+      background-color: #399cbd;
+      color: white;
+      padding: 5px;
+	border-style: solid;
+  border-color: blue;
+      margin: 10px;
+      height: 100px;
+	margin-top:-900px; /*pixel coordinates of the aside element*/
+	margin-right:450px;
+    }
+
+.aside2{
+      width: 40%;
+      float: right;
+      background-color: #399cbd;
+      color: white;
+	border-style: solid;
+  border-color: blue;
+      padding: 5px;
+      margin: 10px;
+      height: 100px;
+	margin-top:-750px;
+	margin-right:450px;
+    }
+
+.aside3{
+      width: 40%;
+      float: right;
+      background-color: #399cbd;
+	border-style: solid;
+  border-color: blue;
+      color: white;
+      padding: 5px;
+      margin: 10px;
+      height: 100px;
+	margin-top:-600px;
+	margin-right:450px;
+    }
+
+.aside4{
+      width: 40%;
+      float: right;
+      background-color: #399cbd;
+	border-style: solid;
+  border-color: blue;
+      color: white;
+      padding: 5px;
+      margin: 10px;
+      height: 100px;
+	margin-top:-450px;
+	margin-right:450px;
+    }
+
+.aside5{
+      width: 40%;
+      float: right;
+      background-color: #399cbd;
+	border-style: solid;
+  border-color: blue;
+      color: white;
+      padding: 5px;
+      margin: 10px;
+      height: 100px;
+	margin-top:-300px;
+	margin-right:450px;
+    }
+
+
+
+
+
+
+
+.header {
+  padding: 60px;
+  text-align: center;
+  color: black;
+  font-size: 19px;
+  font-family: Verdana, sans-serif;
+  border-style: solid;
+  border-color: black;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  overflow: hidden;
+  background-color: #0096FF;
+  
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:#3305A3;
+}
+
+.content {padding:20px;}
+
+.h1 {background-color:blue;}
+
+html {
+   min-height: 100%;
+   background-image: url("https://thumbs.dreamstime.com/b/best-books-home-library-background-read-vintage-row-college-table-publishing-pile-old-lie-concept-vacation-161662282.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+/*for coloured background text*/
+.p {
+	background-color: #43A6C6; /*a calming colour so i chose blue*/
+	color: white; /*same as comment above*/
+	font-family: Verdana, sans-serif; /*a modern font that is still fairly professional*/
+}
+
+/*div class that hides Reveal Plan btn*/
+.hide {
+	visibility: hidden;
+}
+
+
+/*PDP table*/
+
+table, td, th {  
+  border: 1px solid #000;
+  text-align: left;
+  background-color:#399cbd;
+}
+
+th, td {
+  padding:4px;
+  color:white;
+}
+
+</style>
+
+<script>
+	function downloadPlan(){
+		
+		//get all textarea elements for localStorage, input box values for validation check and gets the "Reveal Plan" button
+		textbox1 = document.getElementById("box1").value;
+		textbox2 = document.getElementById("box2").value;
+		textbox3 = document.getElementById("box3").value;
+		textbox4 = document.getElementById("box4").value;
+		textbox6 = document.getElementById("box6").value;
+		boxstudent = document.getElementById("studentname").value;
+		boxperiod = document.getElementById("period").value;
+		boxtutor = document.getElementById("ptutor").value;
+		revealPlan = document.getElementById("reveal");
+		
+		//validation check to see if details have been filled in
+		if(textbox1 == "" || textbox2=="" || textbox3=="" || textbox4==""|| textbox6=="" || boxstudent==" "||boxperiod=="" || boxtutor==""){
+			alert("Please fill in all the boxes");
+			return false;
+
+}  else {
+
+	//store string in localStorage with square brackets so I can split the string into an array of arrays 
+	filetext = textbox1 + "]" + textbox2 + "]" + textbox3 + "]" + textbox4 + "]" + textbox6 + "]";
+	localStorage.setItem("pdp", filetext);
+	revealPlan.style.visibility="visible"; //show reveal btn so user only able to see the table updated with the text they entered if it is saved to localStorage
+	alert("Your PDP has been saved!");	
+}
+}
+
+
+//returs an array of arrays from the string in localStorage
+function makeArray(){
+
+	//string of user's textarea inputs from localStorage
+	var userPDP = JSON.stringify(localStorage.getItem("pdp"));
+	
+	//for length of the string , split the string into subarrays from the square bracket characters
+	for(var e=0;e<userPDP.length;e++){
+		userArray = userPDP[e].split("]");
+		
+		return userArray;
+			
+}
+
+}
+
+function show(){ //when "Reveal Plan" is pressed, the table below is updated with what the user entered in the textareas
+	
+	//table cells that will be updated
+	var tablecell1 = document.getElementById("cell_academic");
+	var tablecell2 = document.getElementById("cell_study");
+	var tablecell3 = document.getElementById("cell_lead");
+      var tablecell4 = document.getElementById("cell_team");
+	var tablecell5 = document.getElementById("cell_comm");
+	var tablecells = [tablecell1,tablecell2,tablecell3,tablecell4,tablecell5];
+	
+	
+	//loop through the array of table data cell ids; loop simalteneously through the userArray and edit innerHTML of all cells with the
+	//strings from localStorage
+
+		userArray = makeArray();
+		for(var e=0; e<userArray.length;e++){
+			for(var i=0;i<tablecells.length;i++){
+				tablecells[i].innerHTML==userArray[e]
+
+	}
+}	
+
+}
+
+
+</script>
+
+
+   <body> 
+	<div class = "header">
+      <header> 
+         <h1> Personal Development</h1> 
+	   <p> Simplify your time at university with a Personal Development Plan!</p>
+	</div>
+      </header> 
+   
+	<!--navigation bar-->
+      <nav> 
+         <ul> 
+		<!--make Edit Plan nav btn active as we are currently on Edit Plan page-->
+		 <li><a href="HomePDP.html">Home</a></li>
+            <li><a class="active" href="#home">Edit Plan</a></li>
+         </ul> 
+      </nav> 
+   
+      <article> 
+		<section>
+			<p class="p">Here's where you can edit your own Personal Development Plan, save it for further editing later and even download it as a document on your device!</p>
+		</section>
+		   <section>
+			<form>
+				<!--form to fill in user details and own PDP, maxlength defined so string made from these values and the textarea values not long resulting in slow performance-->
+				<!--maxlength set to these values as they are reasonable lengths but would present problems for some people with values that exceed these-->
+				<label for="studentname">Student Name:</label> <!--the text next to the input box-->
+ 				 <input type="text" maxlength="50" id="studentname" name="studentname">
+				 <label for="userid">User ID:</label>
+				<input type="text" maxlength="8" id="studentname" name="studentname">
+				
+				<label for="period">Period covered:</label>
+				<input type="text" maxlength="40" id="period" name="period">
+				<label for = "ptutor"> Appraiser/Personal Tutor:</label>
+				<input type="text" id="ptutor" maxlength="50" name="ptutor">
+				
+				
+				<!--maxlength so that the string thats compiled from these textareas isn't too long and performance of website is fast-->
+				
+				<p><b>Objective/Task/Activity</b></p>
+				<p> Academic achievement: </p>
+				<p><b>How would you accomplish this?</b></p>
+				<textarea rows="4" cols="50" id="box1" maxlength="100" name="comment" form="usrform"></textarea>
+ 				
+				<p> Organizational and study skills: </p>
+				<p><b>How would you accomplish this?</b></p>
+				<textarea rows="4" id="box2" cols="50" maxlength="100" name="comment" form="usrform"></textarea>
+				
+				<p> Leadership skills: </p>
+				<p><b>How would you accomplish this?</b></p>
+				<textarea rows="4" cols="50" id="box3" maxlength="100" name="comment" form="usrform"></textarea>
+				
+				<p>Teamwork: </p>
+				<p><b>How would you accomplish this?</b></p>
+				<textarea rows="4" cols="50" id="box4" name="comment" maxlength="100" form="usrform"></textarea>
+				
+				<p> Presentation and communication skills: </p>
+				<p><b>How would you accomplish this?</b></p>
+				<textarea rows="4" cols="50" name="comment" id="box6" form="usrform" maxlength="100"></textarea>
+ 				<br><br>
+
+				<button type ="button" onclick="downloadPlan()">Save Plan</button> 
+				<button type ="button" onclick="show()" id="reveal" class="hide">Reveal Plan</button>		
+
+			</form>
+		   </section>
+		  <section>
+
+<!--table for user's PDP-->
+<!--specifically id table data cells for the show() function to have direct access to these specific cells to update with data-->
+	<table id="myTable">
+  <tr>
+    <th>Objective/Task/Activity</th>
+    <th>How would you accomplish this?</th>
+  </tr>
+  <tr>
+    <td>Academic achievement</td>
+	<td id="cell_academic"> </td>
+  </tr>
+  <tr>
+    <td>Organizational and study skills</td>
+	<td id="cell_study"></td>
+  </tr>
+	<tr>
+    <td> Leadership skills </td>
+	<td id="cell_lead"></td>
+    </tr>
+	<tr>
+      <td>Teamwork</td>
+	<td id="cell_team"></td>
+	 </tr>
+	<tr>
+	<td> Presentation and communication skills </td>
+	    <td id="cell_comm"></td>
+		</tr>
+  
+</table>
+		  </section>
+      </article> 
+   
+	<!--div classes so the asides can be edited with CSS shown above-->
+	<div class="aside1">
+      <aside>You can discuss steps you'll take in your everyday life to improve your academic skills </aside> 
+   	</div>
+	<div class="aside2">
+	<aside> How will you ensure you study? </aside>
+	</div>
+	<div class="aside3">
+	<aside> How will you ensure that you are better able to direct a group of people as well as yourself in your studies? </aside>
+     </div>
+	<div class="aside4">
+	<aside> You can talk about how you will improve your abilities to contribute to a team of people and implement your input where necessary </aside>
+	</div>
+	<div class="aside5">
+	<aside> How can you get better at getting your points across in your everday life? </aside>
+      </div>
+
+      <footer> 
+         <p>Copyrighted by Given Onyumbe Inc.</p> 
+      </footer> 
+   
+   </body> 
+</html> 

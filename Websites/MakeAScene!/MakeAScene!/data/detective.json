@@ -1,0 +1,71 @@
+{
+    "detective": {
+      "characterArc": {
+        "amateurSleuth": {
+          "description": "This is somewhat a general term for any mystery solver who has no connection with law enforcement. Nor do they get paid in assisting in an investigation. These types of fictional detectives can be adventure seekers, inquisitive reporters or simply nosy neighbors. Regardless of their reason for investigating, Amateur Sleuths are guided by their curiosity and desire for knowledge and justice. Because they may lack the skills a 'proper detective', their investigations tend to be a learning experience for them."
+        },
+        "hardboiledDetective": {
+          "description": "A staple in noir fiction, the hardboiled detective is one of the more notable archetypes. All a hardboiled detective needs is a trench coat, a gun and their alcoholic beverage of choice. With their tough exteriors, they have a cynical outlook on the world. Their morals are grey, there is no right or wrong. Protagonists are often depicted as Anti Heroes, or characters who act in self-interest and don’t have typical heroic qualities. An untraditional knight in shining armor, if you will. Perhaps that’s why they sometimes get tangled up with Femme Fatales. Famous fiction detectives such as Philip Marlowe and Sam Spade are noted as quintessential hardboiled detectives."
+        },
+        "privateInvestigator": {
+          "description": "Next up, the private investigator, another notable type of fictional detective. Usually self-employed or cooperating alongside law enforcement, they follow their own rules and their own means of investigating and deduction. In some cases, private investigators have had previous experience working for law enforcement, and may still have connections. Most of the time, they are hired by clients who are in desperate need of their sleuthing skills. Genius great detective types, like Consulting Detective Sherlock Holmes would fit this archetype."
+        },
+        "littleOldLady": {
+          "description": "For a more cozy mystery, call on grandma to save the day. From years of wisdom and experience, they seem to have a knack for this mystery solving thing. Using their unassuming appearance to their advantage, they attract little attention and can work around the cops. Instead of having intense interrogations, suspects sometimes confide details on the case willingly. Constantly underestimated, who would think a sweet little old lady could crack the case? The iconic Miss Marple, created by Agatha Christie, is the perfect example of this type of fictional detective."
+        },
+        "kidDetective": {
+          "description": "Often designed for a younger audience in an adventure-centric plot, a kid detective is another type of detective found in mystery fiction. Though they may not need to be an actual child, this archetype includes sleuths who are minors. These young snoops must sneak past the suspicious adults without getting in trouble with their parents. They rely on trickery and sneaking around to obtain evidence. Being juveniles, they face difficulty asking questions of adults and convincing police that a crime was committed. The cases they take on never involve violence or truly dangerous situations, their antagonists are harmless. Some would argue that Mystery Inc. from the Scooby Doo Franchise would fall under this category."
+        },
+        "femmeFatale": {
+          "description": "The femme fatale is central to many film noir narratives, especially in the key entries of the subgenre from the late 1940s through the late 1950s. The traditional femme fatale used her charm and mystery to manipulate others. She was smart, alluring, and dangerous, often hiding her true intentions. She usually started as a mysterious and seductive figure, eventually revealed to be manipulating events for her benefit—and her character arc often ended tragically, symbolizing the fatal consequences of unchecked ambition and deception. Due to the welcome shift in how women are portrayed in contemporary cinema, the femme fatale has fallen off the cinematic map a bit, although versions of them still appear in contemporary neo-noir films."
+        },
+        "corruptOfficial": {
+          "description": "This archetype represents the perversion of authority—police officers, politicians, or businessmen corrupted by power and greed. They often act as antagonists or formidable obstacles to the protagonist, typically experiencing a rise in power and influence, followed by a dramatic fall. This arc underscores the theme of corruption inherent in film noir, highlighting the destructive nature of greed."
+        },
+        "innocentBystander": {
+          "description": "Often caught in the wrong place at the wrong time, the innocent bystander provides a contrast to the moral ambiguity of other characters. They are the every-man or every-woman who suffers because of the machinations of others. Their character arc usually involves a transformation from naiveté to a more hardened, realistic view of the world, usually because of the betrayal or violence they witness or endure."
+        }
+      },
+      "plotArc": {
+        "mysteriousCrime": {
+          "description": "A crime, often a murder or a series of crimes, is committed that sets the stage for the investigation.",
+          "example": "A high-profile murder that baffles the authorities and is deemed impossible to solve."
+        },
+        "detectiveProtagonist": {
+          "description": "A skilled investigator or private detective, often with a unique approach to solving crimes, is tasked with unraveling the mystery.",
+          "example": "A retired detective, living a quiet life, is pulled back into action to solve a cold case."
+        },
+        "redHerring": {
+          "description": "Misleading clues or false leads that divert the detective and the reader from the true solution.",
+          "example": "A suspect with a strong motive, who seems guilty but is ultimately proven innocent."
+        },
+        "complexSuspects": {
+          "description": "Multiple potential suspects, each with their own secrets and motives, are introduced as the investigation unfolds.",
+          "example": "A group of witnesses, each with different versions of the events leading up to the crime."
+        },
+        "sleuthPersonalStruggles": {
+          "description": "The detective often faces personal dilemmas, emotional challenges, or moral ambiguities that complicate the case.",
+          "example": "A detective with a troubled past who is forced to confront old demons while solving the case."
+        },
+        "clueTrail": {
+          "description": "A series of clues, both physical and circumstantial, that lead the detective closer to solving the crime.",
+          "example": "A collection of strange symbols found near the crime scene, leading to a hidden message."
+        },
+        "villainsMotive": {
+          "description": "The revelation of the true motive behind the crime, often tied to greed, revenge, or a personal vendetta.",
+          "example": "A victim was murdered because of a long-standing grudge dating back to childhood."
+        }
+      },
+      "settings": [
+        "Police stations",
+        "Living room/family home",
+        "Urban Cities",
+        "Mansions",
+        "Streets",
+        "1800s",
+        "Crime Scenes",
+        "Seedy Underworld Locations"
+      ]
+    }
+  }
+  

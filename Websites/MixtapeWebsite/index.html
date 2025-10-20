@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DEEZMIXTAPES - Discover More About Your Favourite Mixtapes!</title>
+    <!--pyscript connection-->
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('BackgroundImages/bgcover6.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: fantasy;
+      font-size: 30px;
+    }
+
+    .search-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #search-bar {
+      width: 250px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .search-bar:focus {
+      border-color: #007bff;
+    }
+
+    #search-button {
+    padding: 10px;
+    font-size: 16px;
+    color: #007bff; /* Blue text color */
+    background-color: transparent; /* Transparent background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    position: relative; /* Add relative positioning */
+}
+
+#search-button:hover {
+    border-bottom: 2px solid #007bff; /* Add a blue line on hover */
+}
+
+    .search-results {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    .result-item {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .mixtape-title {
+      font-weight: bold;
+    }
+
+    .fulltape-link,
+    .wikipedia-link,
+    .interview-link {
+      color: #007bff;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      padding: 10px;
+      width: 600px;
+      margin-top: 10px;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    #related-text {
+      position: absolute;
+      top: 90px;
+      left: 20px;
+      font-size: 16px;
+    }
+
+    #all {
+      position: absolute;
+      top: 110px;
+      left: 20px;
+      font-size: 16px;
+    }
+
+    .fulltape-link:hover,
+    .wikipedia-link:hover,
+    .interview-link:hover {
+      background-color: rgba(0, 123, 255, 0.1);
+    }
+
+    /* Additions for images and welcome box */
+    .welcome-box {
+      position: absolute;
+      top: 160px;
+      right: 20px; /* Adjusted to the right side */
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Whiteish brown fill */
+      border: 2px solid #d2b48c; /* Light brown border */
+      color: #000; /* Black text */
+      max-width: 300px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: fantasy;
+      height: 110%
+    }
+
+    .welcome-box p {
+      margin-bottom: 10px;
+    }
+
+    .images-container {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .welcome-image {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+      /* Additions for images in the top right corner */
+      .top-right-images {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .top-right-image {
+        width: 120px; /* Adjust width */
+        height: 80px; /* Adjust height */
+        object-fit: cover;
+        border-radius: 10px; /* Add border-radius for rounded corners */
+    }
+  </style>
+  <body>
+    <div class="header">DEEZMIXTAPES</div>
+    <div id="related-text">Mixtapes related to:</div>
+    <div id="all"></div>
+
+    <!--Welcome box-->
+    <div class="welcome-box">
+      Welcome to DEEZMIXTAPES! A catalogue system that allows you to search for your favorite mixtapes and listen to them.
+      We also provide further background information about your favorite mixtapes! To search for mixtapes, only search for the mixtape name. Mixtapes on the site include:
+      <ul>
+        <li>"Friday Night Lights" by J. Cole</li>
+        <li>"Da Drought 3" by Lil Wayne</li>
+        <li>"Young Sinatra: Undeniable" by Logic</li>
+        <li>"Amerikkkan Korruption" by Capital STEEZ</li>
+        <li>"Almighty So" by Chief Keef</li>
+        <li>"Guess Who's Back" by 50 Cent</li>
+        <li>"Overly Dedicated" by Kendrick Lamar</li>
+        <li>"The Warm Up" by J. Cole</li>
+        <li>"The Dedication" by Lil Wayne</li>
+        <li>"Dedication 2" by Lil Wayne</li>
+        <li>"Young Sinatra" by Logic</li>
+        <li>"Young Sinatra: Welcome To Forever" by Logic</li>
+        <li>"Bastard" by Tyler, The Creator</li>
+        <li>"Nostalgia, Ultra" by Frank Ocean</li>
+        <li>"Earl" by Earl Sweatshirt</li>
+        <li>"PEEP: The Aprocylapse" by Pro Era</li>
+        <li>"Radical" by Odd Future</li>
+      </ul>
+      For special features, in search bar, search:
+      <ul>
+      <li>"sorted" - all mixtapes in alphabetical order </li>
+      <li> "all" - all mixtapes </li>
+      <li> "artists" - all artists </li>
+      <li> "number of mixtapes" - number of mixtapes</li>
+      <li> "number of artists" - number of artists</li>
+    </ul>
+    </div>
+
+    <div class="top-right-images">
+      <img class="top-right-image" src="HomepageImages\1999_Joey_Badass.jpg" alt="Image 1">
+      <img class="top-right-image" src="HomepageImages\amerikan.jpg" alt="Image 2">
+      <img class="top-right-image" src="HomepageImages\radical.jpg" alt="Image 3">
+  </div>
+
+    <!-- Images -->
+    <div class="images-container">
+      <img class="welcome-image" src="HomepageImages\fnl.png" alt="Welcome Image 1">
+      <img class="welcome-image" src="HomepageImages\dedication5.jpg" alt="Welcome Image 2">
+      <img class="welcome-image" src="HomepageImages\bastard.png" alt="Welcome Image 3">
+      <img class="welcome-image" src="HomepageImages\twu.jpg" alt="Welcome Image 5">
+
+
+    </div>
+    
+
+  <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search...">
+    <button id="search-button">Search</button>
+  </div>
+  
+
+  
+  <div class="search-results">
+    <div class="result-item">
+      <div class="mixtape-title">Mixtape Title 1</div>
+      <a class="fulltape-link" href="#">Fulltape Link 1</a>
+      <br><br>
+      <a class="wikipedia-link" href="#">Wikipedia Link 1</a>
+      <br><br>
+      <a class="interview-link" href="#">Interview Link 1</a>
+    </div>
+  
+    <div class="result-item">
+      <div class="mixtape-title">Mixtape Title 2</div>
+      <a class="fulltape-link" href="#">Fulltape Link 2</a>
+      <br><br>
+      <a class="wikipedia-link" href="#">Wikipedia Link 2</a>
+      <br><br>
+      <a class="interview-link" href="#">Interview Link 2</a>
+    </div>
+  
+    <div class="result-item">
+      <div class="mixtape-title">Mixtape Title 3</div>
+      <a class="fulltape-link" href="#">Fulltape Link 3</a>
+      <br><br>
+      <a class="wikipedia-link" href="#">Wikipedia Link 3</a>
+      <br><br>
+      <a class="interview-link" href="#">Interview Link 3</a>
+    </div>
+  
+    <div class="result-item">
+      <div class="mixtape-title">Mixtape Title 4</div>
+      <a class="fulltape-link" href="#">Fulltape Link 4</a>
+      <br><br>
+      <a class="wikipedia-link" href="#">Wikipedia Link 4</a>
+      <br><br>
+      <a class="interview-link" href="#">Interview Link 4</a>
+    </div>
+  
+    <div class="result-item">
+      <div class="mixtape-title">Mixtape Title 5</div>
+      <a class="fulltape-link" href="#">Fulltape Link 5</a>
+      <br><br>
+      <a class="wikipedia-link" href="#">Wikipedia Link 5</a>
+      <br><br>
+      <a class="interview-link" href="#">Interview Link 5</a>
+    </div>
+  </div>
+  
+  </body>
+  </html>
+
+  </div>
+  <!--link to the main python script-->
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+  </body>
+</html>
+ 
