@@ -1,4 +1,4 @@
-Given Onyumbe's portfolio. All folders are projects that I've completed.
+Given Onyumbe's portfolio. All folders contain the different projects that I've completed.
 
 - Games open with the exe file
 - Websites open with the html file
