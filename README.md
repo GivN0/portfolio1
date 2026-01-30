@@ -1,3 +1,5 @@
+Note: Documentation and videos for Concurrent Design, Developmental Computing and Entrepreneurial Project here: https://mega.nz/folder/JuRhVbDL#Ppmk_NDQjBfIAxWHcI_-3A
+
 All folders contain the different projects that I've completed.
 
 - Games open with the exe file
